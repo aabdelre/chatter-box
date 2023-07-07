@@ -9,12 +9,12 @@ import { api } from '@/state/api.js';
 //import { getDateTime } from 'react-chat-engine-advanced';
 
 export const store = configureStore({
-    reducer: {[ api.reducerPath]: api.reducer },
-    middleware: (getDefault) => getDefault().concat(api.middleware)
+    reducer: {[ api.reducerPath ]: api.reducer },
+    middleware: (getDefault) => getDefault().concat(api.middleware),
 });
 setupListeners(store.dispatch);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
         <App />
     </Provider>
